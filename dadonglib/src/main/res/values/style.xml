@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowBackground">@null</item>-->
+        <item name="colorAccent">@color/z6</item>
+        <item name="colorPrimary">@color/z1</item>
+        <item name="colorPrimaryDark">@color/z1</item>
+    </style>
+
+    <style name="DefaultTheme" parent="DefaultBaseTheme" />
+
+    <style name="SessionTheme" parent="DefaultBaseTheme" />
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="colorAccent">@color/theme_color</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/H5</item>
+    </style>
+
+</resources>

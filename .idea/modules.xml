@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Da_Dong.iml" filepath="$PROJECT_DIR$/Da_Dong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Da_dong.iml" filepath="$PROJECT_DIR$/Da_dong.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dadonglib/dadonglib.iml" filepath="$PROJECT_DIR$/dadonglib/dadonglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dadonglib/logger/logger.iml" filepath="$PROJECT_DIR$/dadonglib/logger/logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/member/member.iml" filepath="$PROJECT_DIR$/modules/member/member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/modules.iml" filepath="$PROJECT_DIR$/modules/modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/speach/speach.iml" filepath="$PROJECT_DIR$/modules/speach/speach.iml" />
     </modules>
   </component>
 </project>

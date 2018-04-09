@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.member.viewModel.MemberLoginViewModel" />
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/member_tv_logo"
+            android:layout_width="375px"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:text="@string/member_wxd_001"
+            android:textSize="60px"
+            android:typeface="serif"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/member_tv_china_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="224px"
+            android:text="@string/member_wxd_003"
+            android:textColor="@color/C3"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_tv_logo" />
+
+        <com.uikit.PhoneEditText
+            android:id="@+id/member_pet_phone"
+            android:layout_width="690px"
+            android:layout_height="140px"
+            android:layout_marginLeft="27px"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/member_wxd_002"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textColor="@color/C1"
+            android:textColorHint="@color/C4"
+            android:textSize="@dimen/T1"
+            app:layout_constraintBottom_toBottomOf="@+id/member_tv_china_phone"
+            app:layout_constraintLeft_toRightOf="@+id/member_tv_china_phone"
+            app:layout_constraintTop_toTopOf="@+id/member_tv_china_phone" />
+
+        <View
+            android:id="@+id/member_view_spilt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/P1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_pet_phone" />
+
+        <EditText
+            android:id="@+id/member_et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/member_wxd_004"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColorHint="@color/C4"
+            android:textSize="@dimen/T1"
+            app:layout_constraintTop_toBottomOf="@+id/member_view_spilt_phone" />
+
+        <View
+            android:id="@+id/member_view_spilt_password"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/P1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_et_pwd" />
+
+        <Button
+            android:id="@+id/member_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="140px"
+            android:text="@string/member_wxd_000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_view_spilt_password" />
+
+        <TextView
+            android:id="@+id/member_tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45px"
+            android:textSize="@dimen/T4"
+            app:html="@{@string/member_wxd_005}"
+            app:layout_constraintRight_toLeftOf="@+id/member_iv_register"
+            app:layout_constraintTop_toBottomOf="@+id/member_btn_login" />
+
+        <ImageView
+            android:id="@+id/member_iv_register"
+            android:layout_width="30px"
+            android:layout_height="18px"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/icon_member_register_click"
+            app:layout_constraintBottom_toBottomOf="@+id/member_tv_register"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/member_tv_register"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/member_tv_register" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

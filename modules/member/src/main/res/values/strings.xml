@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Member</string>
+    <string name="member_wxd_000">登陆</string>
+    <string name="member_wxd_001">DaDong</string>
+    <string name="member_wxd_002">请输入您的手机号</string>
+    <string name="member_wxd_003">+86</string>
+    <string name="member_wxd_004">请输入密码</string>
+    <string name="member_wxd_005">&lt;font color="#AAAAAA">没有账号 &#160; &lt;/font> &lt;font color="#03B1FF"> 立即注册 &lt;/font></string>
+</resources>
+

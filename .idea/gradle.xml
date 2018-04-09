@@ -9,6 +9,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/dadonglib" />
+            <option value="$PROJECT_DIR$/dadonglib/logger" />
+            <option value="$PROJECT_DIR$/modules" />
+            <option value="$PROJECT_DIR$/modules/member" />
+            <option value="$PROJECT_DIR$/modules/speach" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

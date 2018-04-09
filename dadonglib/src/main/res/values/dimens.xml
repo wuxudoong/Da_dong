@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_t6">20px</dimen>
+    <dimen name="font_t5">24px</dimen>
+    <dimen name="font_t4">28px</dimen>
+    <dimen name="font_t3">32px</dimen>
+    <dimen name="font_t2">36px</dimen>
+    <dimen name="font_t1">40px</dimen>
+
+    <dimen name="T1">40px</dimen>
+    <dimen name="T2">36px</dimen>
+    <dimen name="T3">32px</dimen>
+    <dimen name="T4">28px</dimen>
+    <dimen name="T5">24px</dimen>
+    <dimen name="T6">20px</dimen>
+</resources>

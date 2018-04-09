@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#35cbdb</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+
+    <!-- 主题颜色 -->
+    <color name="z1">#F7F7F7</color>
+    <color name="z2">#ffffb457</color>
+    <color name="z3">#ff0071fa</color>
+    <color name="z4">#fff43530</color>
+    <color name="z5">#ff35bc01</color>
+    <color name="z6">#05B5EB</color>
+
+    <!-- 分割线 -->
+    <color name="F1">#ececec</color>
+    <color name="F2">#cccccc</color>
+
+    <!-- 背景色 -->
+    <color name="D1">#ffffff</color>
+    <color name="D2">#f8f8f8</color>
+
+    <color name="color_au">#35ccda</color>
+    <color name="color_ax">#f78790</color>
+
+    <color name="color_0">#d7d7d7</color>
+    <color name="color_8">#F6CF9A</color>
+
+    <!-- 黑色系列 -->
+    <color name="H0">#ff000000</color>
+    <color name="H1">#ff333333</color>
+    <color name="H2">#ff666666</color>
+    <color name="H3">#ff999999</color>
+    <color name="H4">#ffbbbbbb</color>
+    <color name="H5">#ffcccccc</color>
+
+    <!-- 4.0规范 -->
+    <color name="C1">#222222</color>
+    <color name="C2">#666666</color>
+    <color name="C3">#aaaaaa</color>
+    <color name="C4">#cccccc</color>
+    <color name="C5">#ff5e00</color>
+    <color name="C6">#03b1ff</color>
+    <color name="C7">#ffc337</color>
+    <color name="C8">#fe3439</color>
+    <color name="C9">#00cc99</color>
+    <color name="C10">#ffffff</color>
+
+    <!-- 分割线 -->
+    <color name="P1">#ececec</color>
+    <color name="P2">#cccccc</color>
+
+    <!-- 背景 -->
+    <color name="B1">#ffffff</color>
+    <color name="B2">#f7f7f7</color>
+
+    <!--弹框提示框底色-->
+    <color name="BUMP_BOX">#ffefef</color>
+    <!--亮色提示框底色-->
+    <color name="LIGHT_BOX">#ff8000</color>
+    <!--主色延伸颜色-->
+    <color name="MAIN_COLOR">#004f96</color>
+    <!--通讯录Item按下的颜色-->
+    <color name="IM_DOWN">#ebebeb</color>
+    <!--辅助蓝色-->
+    <color name="BLUE">#03B1FF</color>
+
+    <color name="demand_time_unselect">#05B5EB</color>
+    <color name="demand_time_select">#fff</color>
+
+    <!--im模块zj部分-->
+    <color name="text_hint">#bbbbbb</color>
+    <color name="sound_bg">#cc000000</color>
+    <color name="btn_send_bg">#05b5eb</color>
+    <color name="im_refuse_auto_bg">#EBEBEB</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="imageDefaultBg">#3c000000</color>
+
+    <!--按钮各种状态色-->
+    <color name="btn_blue_normal">#05b5eb</color>
+    <color name="btn_blue_tap">#06afe3</color>
+    <color name="btn_red_normal">#fe3439</color>
+    <color name="btn_red_tap">#f13e42</color>
+    <color name="btn_disable">#cccccc</color>
+
+    <color name="bg_control_bar">#cc222222</color>
+
+    <color name="login_zyz_001">#23a7b3</color>
+    <color name="login_zyz_002">#4b4d4e</color>
+    <color name="login_zyz_003">#ffdae6e5</color>
+    <color name="gray_border_line">#cccccc</color>
+    <color name="gray_font">#ff6d6d6d</color>
+    <color name="theme_green">#35cbdb</color>
+
+    <color name="TRANSBLUE">#8003B1FF</color>
+    <!--辅助红色-->
+    <color name="RED">#FE3439</color>
+    <!--辅助绿色-->
+    <color name="GREEN">#00CC99</color>
+    <!--辅助黄色-->
+    <color name="YELLOW1">#FF5E00</color>
+    <color name="YELLOW2">#FF8000</color>
+    <color name="YELLOW3">#FFC337</color>
+    <!--辅助灰色-->
+    <color name="GRAY">#D8D8D8</color>
+    <color name="eva_all">#03B1FF</color>
+    <color name="eva_normal">#59BDFF</color>
+    <color name="eva_bad">#F6F6F6</color>
+
+    <color name="ORANGE">#f37f2e</color>
+
+    <!--身份证上传界面的背景色-->
+    <color name="OUT_BLUE">#40b4ef</color>
+    <color name="INNER_BLUE">#98e1f8</color>
+
+    <!--老师注册顶部进度填充色-->
+    <color name="TYPE_YET">#FF8000</color>
+    <color name="TYPE_CLEAR">#FF8000</color>
+
+</resources>
