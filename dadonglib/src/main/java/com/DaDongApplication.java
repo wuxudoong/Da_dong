@@ -1,16 +1,30 @@
 package com;
 
-import com.base.BaseApplication;
+import android.app.Application;
+import android.content.Context;
 
-import me.chunsheng.logboy.BuildConfig;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * Created by dadong on 2018/4/10.
  */
 
-public class DaDongApplication extends BaseApplication {
+public class DaDongApplication extends Application {
+
+
+    public static Context context;
+
+    public static Context getContext() {
+        return context;
+    }
+
     @Override
-    protected boolean debug() {
-        return BuildConfig.DEBUG;
+    public void onCreate() {
+        super.onCreate();
+        context = this;
+        ARouter.openLog();     // 打印日志
+        ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+
+        ARouter.init(this);
     }
 }
