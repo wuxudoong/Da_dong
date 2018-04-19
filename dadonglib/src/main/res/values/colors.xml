@@ -63,8 +63,6 @@
     <color name="MAIN_COLOR">#004f96</color>
     <!--通讯录Item按下的颜色-->
     <color name="IM_DOWN">#ebebeb</color>
-    <!--辅助蓝色-->
-    <color name="BLUE">#03B1FF</color>
 
     <color name="demand_time_unselect">#05B5EB</color>
     <color name="demand_time_select">#fff</color>
@@ -106,7 +104,6 @@
     <color name="YELLOW3">#FFC337</color>
     <!--辅助灰色-->
     <color name="GRAY">#D8D8D8</color>
-    <color name="eva_all">#03B1FF</color>
     <color name="eva_normal">#59BDFF</color>
     <color name="eva_bad">#F6F6F6</color>
 

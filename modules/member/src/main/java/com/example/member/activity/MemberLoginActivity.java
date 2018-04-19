@@ -8,6 +8,8 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.member.R;
 import com.example.member.databinding.MemberLoginLayoutBinding;
 import com.router.ActivityRouter;
+import com.uikit.DrawableFactory;
+import com.uikit.drawable.BlueBtnDrawable;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 /**
@@ -28,6 +30,7 @@ public class MemberLoginActivity extends AutoLayoutActivity {
 
     private  void init(){
         loginBtn = findViewById(R.id.member_btn_login);
+        DrawableFactory.get(BlueBtnDrawable.class).setBackground(loginBtn);
         loginBtn.setOnClickListener(v->ActivityRouter.gotoAppMainActivity(this));
     }
 }

@@ -1,1 +1,2 @@
-include ':app', ':modules:member', ':dadonglib', ':modules:speach', ':dadonglib:logger'
+include ':app', ':modules:member', ':dadonglib',
+        ':modules:speach', ':dadonglib:logger'

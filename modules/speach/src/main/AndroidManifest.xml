@@ -1,2 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.speach" />
+    package="com.example.speach">
+
+    <application
+        android:name="com.DaDongApplication"
+        android:theme="@style/DefaultTheme">
+        <activity android:name="com.example.speach.SpeachMainActivity">
+
+        </activity>
+    </application>
+</manifest>
