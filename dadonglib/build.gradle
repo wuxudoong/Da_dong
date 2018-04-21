@@ -54,4 +54,5 @@ dependencies {
     compile 'me.chunsheng.logboy:logboy:1.0.2'
 
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.android.support:design:26.1.0'
 }

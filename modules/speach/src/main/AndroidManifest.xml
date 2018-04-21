@@ -4,8 +4,5 @@
     <application
         android:name="com.DaDongApplication"
         android:theme="@style/DefaultTheme">
-        <activity android:name="com.example.speach.SpeachMainActivity">
-
-        </activity>
     </application>
 </manifest>

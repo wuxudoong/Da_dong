@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.wxd.da_dong.activity.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/fl_module_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/B1">
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/v_spilt"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/fl_module_container" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tbl_app_menu"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@color/B1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tabIndicatorHeight="0dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

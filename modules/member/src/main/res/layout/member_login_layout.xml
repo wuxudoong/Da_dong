@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
 
         <variable
@@ -111,8 +113,12 @@
             android:layout_marginTop="45px"
             android:textSize="@dimen/T4"
             app:html="@{@string/member_wxd_005}"
-            app:layout_constraintRight_toLeftOf="@+id/member_iv_register"
-            app:layout_constraintTop_toBottomOf="@+id/member_btn_login" />
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/member_iv_register"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_btn_login"
+            tools:text="没有账号 立即注册" />
 
         <ImageView
             android:id="@+id/member_iv_register"
@@ -121,9 +127,7 @@
             android:layout_marginLeft="10px"
             android:background="@drawable/icon_member_register_click"
             app:layout_constraintBottom_toBottomOf="@+id/member_tv_register"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/member_tv_register"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/member_tv_register" />
     </android.support.constraint.ConstraintLayout>
 </layout>

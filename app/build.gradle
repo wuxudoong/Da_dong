@@ -45,6 +45,7 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
     compileOnly 'org.projectlombok:lombok:1.16.18'
     annotationProcessor "org.projectlombok:lombok:1.16.18"
+    compile 'com.github.alamkanak:android-week-view:1.2.6'
 
     implementation project(':dadonglib')
     implementation project(':modules:member')
