@@ -78,6 +78,8 @@ public class MainActivity extends AutoLayoutActivity {
     }
 
     private void onTabItemSelected(int position) {
+        boolean[] visited = {false, false, false};
+
         View view = null;
         switch (position) {
             case 0:
@@ -93,6 +95,8 @@ public class MainActivity extends AutoLayoutActivity {
         }
         if (view != null) {
 //            getFragmentManager().beginTransaction().replace(R.id.fl_module_container, view).commit();
+
+            mBinding.flModuleContainer.removeView(view);
             mBinding.flModuleContainer.addView(view);
         }
     }
