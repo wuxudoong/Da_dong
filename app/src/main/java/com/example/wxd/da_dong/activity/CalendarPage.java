@@ -59,8 +59,8 @@ public class CalendarPage extends AutoLinearLayout implements
                 false);
 
         CalendarPage root = (CalendarPage) mBinding.getRoot();
-          root.init(mBinding);
-          root.initdata();
+        root.init(mBinding);
+        root.initdata();
 
         return root;
     }

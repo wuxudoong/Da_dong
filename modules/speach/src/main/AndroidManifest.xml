@@ -3,6 +3,5 @@
 
     <application
         android:name="com.DaDongApplication"
-        android:theme="@style/DefaultTheme">
-    </application>
+        android:theme="@style/DefaultTheme"></application>
 </manifest>

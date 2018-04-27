@@ -31,7 +31,6 @@ public class MemberPage extends AutoConstraintLayout {
                 R.layout.member_main_view,
                 null,
                 false);
-
         MemberPage root = (MemberPage) mBinding.getRoot();
         root.init();
         return root;

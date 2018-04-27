@@ -1,5 +1,6 @@
 package com.example.wxd.da_dong;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +27,7 @@ public class MenuGenerator {
     public static List<View> getViews(Context context) {
         List<View> views = new ArrayList<>();
         views.add(CalendarPage.getInstance(context));
-        views.add(SpeechPage.getInstance(context));
+        views.add(SpeechPage.getInstance((Activity) context));
         views.add(MemberPage.getInstance(context));
         return views;
     }
