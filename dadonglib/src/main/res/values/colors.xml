@@ -117,4 +117,6 @@
     <color name="TYPE_YET">#FF8000</color>
     <color name="TYPE_CLEAR">#FF8000</color>
 
+    <color name="test">#FF008800</color>
+
 </resources>

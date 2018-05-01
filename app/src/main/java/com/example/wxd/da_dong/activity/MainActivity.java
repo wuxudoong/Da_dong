@@ -78,9 +78,8 @@ public class MainActivity extends AutoLayoutActivity {
     }
 
     private void onTabItemSelected(int position) {
-        boolean[] visited = {false, false, false};
-
         View view = null;
+        viewsGone(position);
         switch (position) {
             case 0:
                 view = views.get(0);
@@ -88,18 +87,25 @@ public class MainActivity extends AutoLayoutActivity {
             case 1:
                 view = views.get(1);
                 break;
-
             case 2:
                 view = views.get(2);
                 break;
         }
         if (view != null) {
-//            getFragmentManager().beginTransaction().replace(R.id.fl_module_container, view).commit();
-
             mBinding.flModuleContainer.removeView(view);
             mBinding.flModuleContainer.addView(view);
         }
     }
 
+    private void viewsGone(int position) {
+        for (int i = 0; i < 3; ++i) {
+            if (i == position) {
+                views.get(i).setVisibility(View.VISIBLE);
+                continue;
+            } else {
+                views.get(i).setVisibility(View.GONE);
+            }
+        }
+    }
 
 }

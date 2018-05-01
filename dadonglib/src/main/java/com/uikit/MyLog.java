@@ -18,9 +18,6 @@ import org.json.JSONObject;
 import me.chunsheng.logboy.BuildConfig;
 import me.chunsheng.logboy.LogBoy;
 
-/**
- * Created by ck on 2017/6/19.
- */
 
 public class MyLog {
     private static final String LINE_SEPARATOR = System.getProperty("line.separator");

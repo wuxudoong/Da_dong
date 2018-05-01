@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.uikit.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="88px"
+    android:background="@color/B1">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="85px"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:scaleType="centerInside"
+        android:src="@drawable/ico_back"
+        android:textColor="@color/C2"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:textColor="@color/C2"
+        android:textSize="@dimen/font_t3"
+        android:visibility="visible"
+        tools:text="左侧标题" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="350px"
+        android:singleLine="true"
+        android:textColor="@color/C1"
+        android:textSize="@dimen/font_t2"
+        tools:text="标题" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="44px"
+        android:layout_height="44px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30px"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_right_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:textColor="@color/C2"
+        android:textSize="@dimen/font_t3"
+        android:visibility="gone"
+        tools:text="右侧标题"
+        tools:visibility="visible" />
+
+</com.uikit.Toolbar>
+
+

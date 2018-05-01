@@ -2,9 +2,7 @@ package com.uikit;
 
 import android.view.View;
 
-/**
- * Created by ck on 2017/7/6.
- */
+
 
 public abstract class DrawableFactory {
 

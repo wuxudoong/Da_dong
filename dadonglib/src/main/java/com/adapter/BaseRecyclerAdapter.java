@@ -72,36 +72,36 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter {
         return mItems.size();
     }
 
-    void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
 
-    void addAll(List<T> items) {
+    public void addAll(List<T> items) {
         if (items != null && items.size() > 0) {
             mItems.addAll(items);
             notifyItemRangeInserted(mItems.size(), items.size());
         }
     }
 
-    final void addItem(T item) {
+    public final void addItem(T item) {
         if (item != null) {
             this.mItems.add(item);
             notifyItemChanged(mItems.size());
         }
     }
 
-    final List<T> getItems() {
+    public final List<T> getItems() {
         return mItems;
     }
 
 
-    final T getItem(int position) {
+    public final T getItem(int position) {
         if (position < 0 || position >= mItems.size())
             return null;
         return mItems.get(position);
     }
 
-    static abstract class OnClickListener implements View.OnClickListener {
+    public static abstract class OnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             RecyclerView.ViewHolder holder = (RecyclerView.ViewHolder) v.getTag();
@@ -112,7 +112,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter {
     }
 
 
-    interface OnItemClickListener {
+    public interface OnItemClickListener {
         void onItemClick(int position, long itemId);
     }
 

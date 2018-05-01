@@ -26,7 +26,7 @@ public class MenuGenerator {
 
     public static List<View> getViews(Context context) {
         List<View> views = new ArrayList<>();
-        views.add(CalendarPage.getInstance(context));
+        views.add(CalendarPage.getInstance((Activity) context));
         views.add(SpeechPage.getInstance((Activity) context));
         views.add(MemberPage.getInstance(context));
         return views;

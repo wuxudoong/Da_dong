@@ -6,22 +6,22 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/B2"
         tools:context="com.example.wxd.da_dong.activity.MainActivity">
 
         <FrameLayout
             android:id="@+id/fl_module_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/B1">
-
-        </FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="102px"
+            android:background="@color/B2" />
 
         <View
             android:id="@+id/v_spilt"
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="@color/P1"
-            app:layout_constraintTop_toBottomOf="@+id/fl_module_container" />
+            app:layout_constraintBottom_toTopOf="@+id/tbl_app_menu" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tbl_app_menu"

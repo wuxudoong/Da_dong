@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ll_message_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/B1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:lineSpacingExtra="50px"
+            android:padding="30px"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            tools:text="文案文案文案文案文案文案 " />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_affirm"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="50px"
+            android:layout_marginTop="60px"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/lib_wxd_000"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/T2" />
+
+    </LinearLayout>
+
+</layout>

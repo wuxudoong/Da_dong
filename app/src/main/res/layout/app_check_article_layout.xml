@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B1"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/C1"
+                    android:textSize="@dimen/T1"
+                    tools:text="shishisaonian" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="30px"
+                    android:lineSpacingExtra="20px"
+                    android:textColor="@color/C2"
+                    android:textSize="@dimen/T3"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    tools:text="根据国务院办公厅颁布的《全国年节及纪念日放假办法》，今年中秋节放假安排为：9月6日至8日(周六、周日、周一)放假，共3天。其中，9月6日(周六)为公休日，9月8日(中秋节)为法定节假日。请各部门做好节前安全检查工作。各教学部门将放假安排通知到每位师生，对外出的学生做好安全教育工作。继续教育学院、国际教育学院及MBA学院参照学校放假安排，结合自身教学计划自行调整，确保正常的教学秩序。" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

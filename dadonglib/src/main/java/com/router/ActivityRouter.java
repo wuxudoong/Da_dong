@@ -12,9 +12,14 @@ public class ActivityRouter {
 
     //    APP模块
     public static final String APP_MAIN = "/app/main";
+    public static final String APP_CHECK_ARTICLE = "/app/checkArticle";
 
     public static void gotoAppMainActivity(Context context) {
         ARouter.getInstance().build(APP_MAIN).navigation(context);
+    }
+
+    public static void gotoAppCheckArticle(int position, Context context){
+        ARouter.getInstance().build(APP_CHECK_ARTICLE).withInt("position", position).navigation(context);
     }
 
     //    Member模块
