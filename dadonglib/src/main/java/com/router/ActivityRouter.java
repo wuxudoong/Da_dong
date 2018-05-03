@@ -24,10 +24,21 @@ public class ActivityRouter {
 
     //    Member模块
     public static final String MEMBER_LOGIN = "/member/login";
+    public static final String MEMBER_SYSTEM_SETTING = "/member/systemsetting";
+    public static final String MEMBER_CHANGE_PWD = "/member/changepwd";
+
+    public static void gotoMemberSystermSetting(Context context){
+        ARouter.getInstance().build(MEMBER_SYSTEM_SETTING).navigation(context);
+    }
 
     public static void gotoMemberLoginActivity(Context context) {
         ARouter.getInstance().build(MEMBER_LOGIN).navigation(context);
     }
+
+    public static void gotoMemberChangePwd(Context context){
+     ARouter.getInstance().build(MEMBER_CHANGE_PWD).navigation(context);
+    }
+
 
     //  Speech模块
     public static final String SPEECH_TEST = "/speech/test";

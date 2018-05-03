@@ -1,15 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.member" >
+    package="com.example.member">
 
     <application
         android:name="com.DaDongApplication"
         android:theme="@style/DefaultTheme">
-        <activity android:name=".activity.MemberLoginActivity">
+        <activity
+            android:name=".activity.MemberLoginActivity"
+            android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SystemSettingActivity" />
+        <activity android:name=".activity.ChangePwdActivity" />
     </application>
 </manifest>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -14,11 +16,195 @@
         android:background="@color/B1">
 
         <TextView
+            android:id="@+id/tv_member_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MEMBER"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="99px"
             android:textColor="@color/C1"
-            android:textSize="@dimen/T1" />
+            android:textSize="60px"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="吴大东" />
+
+        <TextView
+            android:id="@+id/tv_edit_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="@string/member_wxd_006"
+            android:textColor="#03B1FF"
+            app:layout_constraintStart_toStartOf="@+id/tv_member_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member_name" />
+
+        <ImageView
+            android:layout_width="20px"
+            android:layout_height="18px"
+            android:layout_marginLeft="5px"
+            android:background="@drawable/icon_member_register_click"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_edit_info"
+            app:layout_constraintLeft_toRightOf="@+id/tv_edit_info"
+            app:layout_constraintTop_toTopOf="@+id/tv_edit_info" />
+
+        <ImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginEnd="40px"
+            android:layout_marginRight="40px"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_edit_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_member_name"
+            app:radius="@{100}"
+            app:url="@{viewModel.portraitUrl}"
+            tools:background="@color/INNER_BLUE" />
+
+        <ImageView
+            android:id="@+id/iv_member_calendar"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="80px"
+            android:background="@drawable/icon_app_schedule"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait" />
+
+        <TextView
+            android:id="@+id/tv_member_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:text="@string/member_wxd_007"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toRightOf="@+id/iv_member_calendar"
+            app:layout_constraintTop_toTopOf="@+id/iv_member_calendar" />
+
+        <View
+            android:id="@+id/v_schedule_spilt"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="34px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member_calendar" />
+
+        <View
+            android:id="@+id/v_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintBottom_toBottomOf="@+id/v_schedule_spilt" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_schedule"
+            android:layout_width="20px"
+            android:layout_height="34px"
+            android:layout_marginRight="40px"
+            android:background="@drawable/icon_app_right_gray"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_member_calendar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_member_calendar" />
+
+        <ImageView
+            android:id="@+id/iv_member_setting"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/icon_app_setting"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_schedule_spilt" />
+
+        <TextView
+            android:id="@+id/tv_member_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:text="@string/member_wxd_008"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toRightOf="@+id/iv_member_setting"
+            app:layout_constraintTop_toTopOf="@+id/iv_member_setting" />
+
+        <View
+            android:id="@+id/v_setting_spilt"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="34px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member_setting" />
+
+        <View
+            android:id="@+id/v_setting"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintBottom_toBottomOf="@+id/v_setting_spilt" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_setting"
+            android:layout_width="20px"
+            android:layout_height="34px"
+            android:layout_marginRight="40px"
+            android:background="@drawable/icon_app_right_gray"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_member_setting"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_member_setting" />
+
+        <ImageView
+            android:id="@+id/iv_member_contact"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/icon_app_contact"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_setting_spilt" />
+
+        <TextView
+            android:id="@+id/tv_member_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:text="@string/member_wxd_009"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toRightOf="@+id/iv_member_contact"
+            app:layout_constraintTop_toTopOf="@+id/iv_member_contact" />
+
+        <View
+            android:id="@+id/v_setting_contact"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="34px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_member_contact" />
+
+        <View
+            android:id="@+id/v_contact"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintBottom_toBottomOf="@+id/v_setting_contact" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_contact"
+            android:layout_width="20px"
+            android:layout_height="34px"
+            android:layout_marginRight="40px"
+            android:background="@drawable/icon_app_right_gray"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_member_contact"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_member_contact" />
 
     </com.example.member.activity.MemberPage>
 </layout>

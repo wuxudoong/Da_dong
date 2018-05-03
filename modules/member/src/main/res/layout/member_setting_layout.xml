@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B1">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/tv_change_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="80px"
+            android:text="@string/member_wxd_010"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <ImageView
+            android:id="@+id/iv_setting_pwd"
+            android:layout_width="20px"
+            android:layout_height="34px"
+            android:layout_marginRight="40px"
+            android:background="@drawable/icon_app_right_gray"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_change_pwd"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_change_pwd" />
+
+        <View
+            android:id="@+id/v_pwd_spilt"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="35px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_change_pwd" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:text="@string/member_wxd_011"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_pwd_spilt" />
+
+        <TextView
+            android:id="@+id/iv_setting_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40px"
+            android:textColor="@color/C3"
+            android:textSize="@dimen/T3"
+            app:layout_auto_basewidth="height"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_clear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_clear"
+            tools:text="2m" />
+
+        <View
+            android:id="@+id/v_clear_spilt"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="35px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_clear" />
+
+        <View
+            android:id="@+id/v_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintBottom_toTopOf="@+id/v_pwd_spilt" />
+
+        <View
+            android:id="@+id/v_clear"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintBottom_toTopOf="@+id/v_clear_spilt" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

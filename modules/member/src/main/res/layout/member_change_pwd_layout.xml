@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B1">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <EditText
+            android:id="@+id/et_old_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="172px"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/member_wxd_014"
+            android:inputType="textPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/C4"
+            android:textSize="@dimen/T4"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/F1"
+            app:layout_constraintTop_toBottomOf="@+id/et_old_pwd" />
+
+
+        <EditText
+            android:id="@+id/et_new_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/member_wxd_016"
+            android:inputType="textPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/C4"
+            android:textSize="@dimen/T4"
+            app:layout_constraintTop_toBottomOf="@+id/et_old_pwd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/F1"
+            app:layout_constraintTop_toBottomOf="@+id/et_new_pwd" />
+
+        <EditText
+            android:id="@+id/et_again_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/member_wxd_017"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:textColorHint="@color/C4"
+            android:textSize="@dimen/T4"
+            app:layout_constraintTop_toBottomOf="@+id/et_new_pwd" />
+
+        <View
+            android:id="@+id/v_spilt_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@color/F1"
+            app:layout_constraintTop_toBottomOf="@+id/et_again_pwd" />
+
+        <TextView
+            android:id="@+id/btn_affirm"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="714px"
+            android:gravity="center"
+            android:text="@string/member_wxd_018"
+            android:textColor="@color/B1"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:background="@color/C6" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
