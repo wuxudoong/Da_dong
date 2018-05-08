@@ -20,7 +20,7 @@ import com.zhy.autolayout.AutoConstraintLayout;
 public class MemberPage extends AutoConstraintLayout {
 
     MemberMainViewModel viewModel = new MemberMainViewModel();
-    private String portraitUrl = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2159734914,2494499058&fm=27&gp=0.jpg";
+    private String portraitUrl = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4015140342,3033919786&fm=27&gp=0.jpg";
 
     public MemberPage(Context context) {
         super(context);
@@ -45,6 +45,7 @@ public class MemberPage extends AutoConstraintLayout {
     }
 
     private void init(MemberMainViewBinding mBinding) {
+        mBinding.setViewModel(viewModel);
         String phone = "17826875948";
         viewModel.portraitUrl.set(portraitUrl);
         mBinding.tvMemberName.setText("吴大东");
@@ -58,6 +59,10 @@ public class MemberPage extends AutoConstraintLayout {
 
         mBinding.vSetting.setOnClickListener(v -> {
             ActivityRouter.gotoMemberSystermSetting(getContext());
+        });
+
+        mBinding.tvEditInfo.setOnClickListener(v->{
+            ActivityRouter.gotoMemberInformationActivity(getContext());
         });
     }
 

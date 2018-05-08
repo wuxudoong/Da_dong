@@ -41,6 +41,7 @@
             android:launchMode="singleTask" />
 
         <activity android:name=".activity.CheckArticleActivity" />
+        <activity android:name=".activity.EditScheduleActivity"/>
     </application>
 
 </manifest>

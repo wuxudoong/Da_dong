@@ -113,6 +113,13 @@ public class CalendarPage extends AutoLinearLayout implements
                         dialog.dismiss();
                     }
                 });
+                messageDialog.setOnEditListener(new MessageDialog.OnEditListener() {
+                    @Override
+                    public void onEdit(MessageDialog dialog) {
+                        ActivityRouter.gotoAppEditScheduleActivity(getContext());
+                        dialog.dismiss();
+                    }
+                });
                 if (calendar.getScheme() == null || calendar.getScheme().isEmpty()) {
                     messageDialog.setMessage("宝贝今天没有任何安排哦～～");
                 } else {
@@ -154,13 +161,13 @@ public class CalendarPage extends AutoLinearLayout implements
         int month = mCalendarView.getCurMonth();
 
         schemes.add(getSchemeCalendar(year, month, 3, 0xFF40db25, "诗", "今天给宝贝听唐诗三百首"));
-        schemes.add(getSchemeCalendar(year, month, 6, 0xFFe69138, "故事", "今天给宝贝听故事"));
-        schemes.add(getSchemeCalendar(year, month, 9, 0xFFdf1356, "童话", "今天给宝贝听童话故事"));
+        schemes.add(getSchemeCalendar(year, month, 6, 0xFFe69138, "童", "今天给宝贝听故事"));
+        schemes.add(getSchemeCalendar(year, month, 9, 0xFFdf1356, "童", "今天给宝贝听童话故事"));
         schemes.add(getSchemeCalendar(year, month, 13, 0xFFedc56d, "诗", "今天给宝贝听唐诗三百首"));
         schemes.add(getSchemeCalendar(year, month, 14, 0xFFedc56d, "数", "今天让宝贝做口算训练"));
         schemes.add(getSchemeCalendar(year, month, 15, 0xFFaacc44, "数", "今天让宝贝做口算训练"));
-        schemes.add(getSchemeCalendar(year, month, 18, 0xFFbc13f0, "童话", "今天给宝贝听童话故事"));
-        schemes.add(getSchemeCalendar(year, month, 25, 0xFF13acf0, "故事", "今天给宝贝听故事"));
+        schemes.add(getSchemeCalendar(year, month, 18, 0xFFbc13f0, "童", "今天给宝贝听童话故事"));
+        schemes.add(getSchemeCalendar(year, month, 25, 0xFF13acf0, "童", "今天给宝贝听故事"));
         schemes.add(getSchemeCalendar(year, month, 27, 0xFF13acf0, "诗", "今天给宝贝听唐诗三百首"));
         mCalendarView.setSchemeDate(schemes);
 

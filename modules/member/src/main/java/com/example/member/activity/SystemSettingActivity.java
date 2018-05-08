@@ -32,11 +32,11 @@ public class SystemSettingActivity extends AutoLayoutActivity {
         }, getString(R.string.member_wxd_013));
 
         mBinding.vChangePwd.setOnClickListener(v -> {
-
+            ActivityRouter.gotoMemberChangePwd(this);
         });
 
         mBinding.vClear.setOnClickListener(v -> {
-            mBinding.tvClear.setText("0m");
+            mBinding.tvSettingClear.setText("0m");
         });
     }
 }

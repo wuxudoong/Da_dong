@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B2"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <EditText
+            android:id="@+id/et_complain"
+            android:layout_width="690px"
+            android:layout_height="690px"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="92px"
+            android:background="@color/B1"
+            android:gravity="left|top"
+            android:hint="@string/app_wxd_001"
+            android:maxLength="150"
+            android:paddingLeft="30px"
+            android:paddingRight="47px"
+            android:paddingTop="20px"
+            android:scrollbars="vertical"
+            android:textColor="@color/C2"
+            android:textColorHint="@color/C4"
+            android:textCursorDrawable="@drawable/bg_cursor_color"
+            android:textSize="@dimen/T4" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="690px"
+            android:layout_height="100px"
+            android:layout_below="@+id/et_complain"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="100px"
+            android:text="@string/app_wxd_002"
+            android:textColor="@color/B1"
+            android:textSize="@dimen/T2" />
+    </RelativeLayout>
+
+</layout>

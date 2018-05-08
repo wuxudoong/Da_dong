@@ -3,13 +3,16 @@ package com.example.speach.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.Toast;
 
+import com.adapter.BaseRecyclerAdapter;
+import com.example.speach.Article;
 import com.example.speach.R;
 import com.example.speach.ResultBean;
+import com.example.speach.adapter.SpeechDataAdapter;
 import com.example.speach.databinding.SpeechMainLayoutBinding;
 import com.google.gson.Gson;
 import com.iflytek.cloud.RecognizerResult;
@@ -18,8 +21,11 @@ import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechSynthesizer;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
+import com.recyclerview.GroupItemDecoration;
+import com.uikit.DrawableFactory;
 import com.uikit.MyLog;
-import com.zhy.autolayout.AutoLinearLayout;
+import com.uikit.drawable.BlueRoundDrawable;
+import com.zhy.autolayout.AutoConstraintLayout;
 
 import java.util.List;
 
@@ -27,7 +33,7 @@ import java.util.List;
  * Created by dadong on 2018/4/18.
  */
 
-public class SpeechPage extends AutoLinearLayout {
+public class SpeechPage extends AutoConstraintLayout {
 
     private Gson mGson;
     private Activity mActivity;
@@ -53,12 +59,27 @@ public class SpeechPage extends AutoLinearLayout {
         mActivity = activity;
         MyLog.d(mActivity.getLocalClassName() + "shishi");
         Log.d(mActivity.getLocalClassName(), "shishi11");
-        mBinding.btnSpeakChinese.setOnClickListener(v -> {
+        mBinding.tvSpeakChinese.setOnClickListener(v -> {
            onRecognise();
         });
-        mBinding.btnCreateChinese.setOnClickListener(v -> {
+        DrawableFactory.get(BlueRoundDrawable.class).setBackground(mBinding.tvSpeakChinese);
+     /*   mBinding.btnCreateChinese.setOnClickListener(v -> {
             onSynthesize();
+        });*/
+
+        mBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mBinding.recyclerView.addItemDecoration(new GroupItemDecoration<String, Article>());
+        SpeechDataAdapter myAdapter = new SpeechDataAdapter(getContext());
+        myAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position, long itemId) {
+                onSynthesize(myAdapter.getItem(position).getContent());
+            }
         });
+        mBinding.recyclerView.setAdapter(myAdapter);
+
+        mBinding.recyclerView.notifyDataSetChanged();
+
     }
 
     public void onRecognise() {
@@ -100,7 +121,7 @@ public class SpeechPage extends AutoLinearLayout {
                     w += cw.get(j).getW();
                 }
             }
-            Toast.makeText(getContext(), w, Toast.LENGTH_SHORT).show();
+            onSynthesize(mNewsText);
         }
 
         @Override
@@ -109,7 +130,7 @@ public class SpeechPage extends AutoLinearLayout {
         }
     };
 
-    public void onSynthesize() {
+    public void onSynthesize(String text) {
         //1.创建 SpeechSynthesizer 对象, 第二个参数： 本地合成时传 InitListener
         SpeechSynthesizer mTts = SpeechSynthesizer.createSynthesizer(mActivity, null);
         //2.合成参数设置，详见《 MSC Reference Manual》 SpeechSynthesizer 类
@@ -123,6 +144,6 @@ public class SpeechPage extends AutoLinearLayout {
         //仅支持保存为 pcm 和 wav 格式， 如果不需要保存合成音频，注释该行代码
         mTts.setParameter(SpeechConstant.TTS_AUDIO_PATH, "./sdcard/iflytek.pcm");
         //3.开始合成
-        mTts.startSpeaking(mNewsText, null);
+        mTts.startSpeaking(text, null);
     }
 }

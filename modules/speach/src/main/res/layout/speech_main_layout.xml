@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -11,20 +12,38 @@
     <com.example.speach.activity.SpeechPage
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/B1"
-        android:orientation="vertical">
+        android:background="@color/B1">
 
-        <Button
-            android:id="@+id/btn_speak_chinese"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="语音识别" />
 
-        <Button
-            android:id="@+id/btn_create_chinese"
+
+        <com.recyclerview.GroupRecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="语音合成" />
+            android:layout_height="match_parent"
+            android:background="@color/B1"
+            app:group_background="@color/B1"
+            app:group_center="false"
+            app:group_has_header="false"
+            app:group_height="42dp"
+            app:group_padding_left="16dp"
+            app:group_padding_right="16dp"
+            app:group_text_color="#555555"
+            app:group_text_size="14sp" />
+
+        <TextView
+            android:id="@+id/tv_speak_chinese"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginBottom="100px"
+            android:background="@color/C6"
+            android:gravity="center"
+            android:text="@string/speech_wxd_000"
+            android:textColor="@color/C2"
+            android:textSize="@dimen/T4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
 
     </com.example.speach.activity.SpeechPage>
 </layout>

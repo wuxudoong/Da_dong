@@ -19,5 +19,15 @@
     <string name="member_wxd_017">再次输入新密码</string>
     <string name="member_wxd_018">完成</string>
     <string name="member_wxd_019">设置密码</string>
+    <string name="member_wxd_020">性别</string>
+    <string name="member_wxd_021">女</string>
+    <string name="member_wxd_022">男</string>
+    <string name="member_wxd_023">昵称</string>
+    <string name="member_wxd_024">年龄</string>
+    <string name="member_wxd_025">城市</string>
+    <string name="member_wxd_026">签名</string>
+    <string name="member_wxd_027">做好自己，无需事故</string>
+    <string name="member_wxd_028">个人资料编辑</string>
+    <string name="member_wxd_029">请输入手机号码</string>
 </resources>
 

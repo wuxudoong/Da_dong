@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Da_Dong</string>
     <string name="app_wxd_000">返回</string>
+    <string name="app_wxd_001">规划一下学习计划吧～～</string>
+    <string name="app_wxd_002">完成</string>
+    <string name="app_wxd_003">日程安排</string>
 </resources>

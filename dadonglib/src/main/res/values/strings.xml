@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DaDong</string>
     <string name="lib_wxd_000">我知道了</string>
+    <string name="lib_wxd_001">编辑日程</string>
 </resources>

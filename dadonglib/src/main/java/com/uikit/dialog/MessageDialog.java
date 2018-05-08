@@ -24,6 +24,7 @@ import com.zhy.autolayout.utils.AutoUtils;
 public class MessageDialog extends DialogFragment {
     DialogRemindLayoutBinding mBinding;
     OnConfirmClickListener onConfirmClickListener;
+    OnEditListener onEditListener;
     String message;
 
     @Override
@@ -43,6 +44,12 @@ public class MessageDialog extends DialogFragment {
             }
         });
         mBinding.tvMessage.setText(message);
+
+        mBinding.tvEdit.setOnClickListener(v->{
+            if(onEditListener !=  null){
+                onEditListener.onEdit(this);
+            }
+        });
     }
 
     @Override
@@ -73,6 +80,10 @@ public class MessageDialog extends DialogFragment {
         this.onConfirmClickListener = onConfirmClickListener;
     }
 
+    public void setOnEditListener(OnEditListener onEditListener){
+        this.onEditListener = onEditListener;
+    }
+
     public void setMessage(String message){
         this.message = message;
     }
@@ -94,6 +105,10 @@ public class MessageDialog extends DialogFragment {
 
     public interface OnConfirmClickListener {
         void onConfirm(MessageDialog dialog);
+    }
+
+    public interface OnEditListener{
+        void onEdit(MessageDialog dialog);
     }
 }
 

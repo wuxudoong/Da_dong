@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.member.viewModel.MemberInformationViewModel" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B1">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <ImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:url="@{viewModel.portraitUrl}"
+            tools:background="@color/GRAY" />
+
+        <ImageView
+            android:id="@+id/iv_takePhoto"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="310px"
+            android:background="@drawable/icon_member_take_photo"
+            android:scaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_portrait" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="20px"
+            android:text="@string/member_wxd_020"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait" />
+
+        <ImageView
+            android:id="@+id/iv_female"
+            android:layout_width="87px"
+            android:layout_height="87px"
+            android:layout_marginLeft="160px"
+            android:layout_marginTop="63px"
+            android:padding="20px"
+            android:scaleType="centerInside"
+            android:src="@{viewModel.isMale?@drawable/bg_circle:@drawable/icon_member_checked}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait"
+            tools:src="@color/GRAY" />
+
+        <ImageView
+            android:id="@+id/iv_male"
+            android:layout_width="87px"
+            android:layout_height="87px"
+            android:layout_marginRight="209px"
+            android:layout_marginTop="63px"
+            android:padding="20px"
+            android:scaleType="centerInside"
+            android:src="@{viewModel.isMale?@drawable/icon_member_checked:@drawable/bg_circle}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait"
+            tools:src="@color/GRAY" />
+
+        <TextView
+            android:id="@+id/tv_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="@string/member_wxd_021"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_female"
+            app:layout_constraintLeft_toRightOf="@+id/iv_female"
+            app:layout_constraintTop_toTopOf="@+id/iv_female" />
+
+        <TextView
+            android:id="@+id/tv_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="@string/member_wxd_022"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_male"
+            app:layout_constraintLeft_toRightOf="@+id/iv_male"
+            app:layout_constraintTop_toTopOf="@+id/iv_male" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="160px"
+            android:background="@color/F1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="160px"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40px"
+                android:text="@string/member_wxd_023"
+                android:textColor="@color/C3"
+                android:textSize="@dimen/font_t3" />
+
+            <ImageView
+                android:id="@+id/right_arrow_name"
+                android:layout_width="20px"
+                android:layout_height="34px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@drawable/icon_app_right_gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:layout_toLeftOf="@id/right_arrow_name"
+                android:text="@{viewModel.name}"
+                android:textColor="@color/C1"
+                android:textSize="@dimen/font_t3"
+                tools:text="又肥又费的肥肥" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/F1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_grade"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            app:layout_constraintTop_toBottomOf="@+id/rl_name">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40px"
+                android:text="@string/member_wxd_024"
+                android:textColor="@color/C3"
+                android:textSize="@dimen/font_t3" />
+
+            <ImageView
+                android:id="@+id/right_arrow_grade"
+                android:layout_width="20px"
+                android:layout_height="34px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@drawable/icon_app_right_gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:layout_toLeftOf="@id/right_arrow_grade"
+                android:text="@{viewModel.grade}"
+                android:textColor="@color/C1"
+                android:textSize="@dimen/font_t3"
+                tools:text="15岁" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/F1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_city"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            app:layout_constraintTop_toBottomOf="@+id/rl_grade">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40px"
+                android:text="@string/member_wxd_025"
+                android:textColor="@color/C3"
+                android:textSize="@dimen/font_t3" />
+
+            <ImageView
+                android:id="@+id/right_arrow_city"
+                android:layout_width="20px"
+                android:layout_height="34px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@drawable/icon_app_right_gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:layout_toLeftOf="@id/right_arrow_city"
+                android:text="@{viewModel.city}"
+                android:textColor="@color/C1"
+                android:textSize="@dimen/font_t3"
+                tools:text="浙江" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/F1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sign"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            app:layout_constraintTop_toBottomOf="@+id/rl_city">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40px"
+                android:text="@string/member_wxd_026"
+                android:textColor="@color/C3"
+                android:textSize="@dimen/font_t3" />
+
+            <ImageView
+                android:id="@+id/right_arrow_sign"
+                android:layout_width="20px"
+                android:layout_height="34px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@drawable/icon_app_right_gray" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:layout_toLeftOf="@id/right_arrow_sign"
+                android:hint="@string/member_wxd_027"
+                android:text="@{viewModel.sign}"
+                android:textColor="@color/C1"
+                android:textColorHint="@color/C4"
+                android:textSize="@dimen/font_t3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/F1" />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
