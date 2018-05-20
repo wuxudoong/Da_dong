@@ -127,7 +127,6 @@ public class CalendarPage extends AutoLinearLayout implements
                     messageDialog.setMessage("宝贝今天要学习哦～～");
                 }
                 messageDialog.show(activity.getFragmentManager());
-
             }
         });
 
@@ -174,7 +173,9 @@ public class CalendarPage extends AutoLinearLayout implements
         mRecyclerView = (GroupRecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.addItemDecoration(new GroupItemDecoration<String, Article>());
+        //适配器
         ArticleAdapter myAdapter = new ArticleAdapter(getContext());
+        //item的监听
         myAdapter.setOnItemClickListener(new BaseRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position, long itemId) {
@@ -182,7 +183,7 @@ public class CalendarPage extends AutoLinearLayout implements
             }
         });
         mRecyclerView.setAdapter(myAdapter);
-
+        //数据刷新
         mRecyclerView.notifyDataSetChanged();
     }
 

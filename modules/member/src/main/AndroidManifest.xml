@@ -16,7 +16,8 @@
         </activity>
         <activity android:name=".activity.SystemSettingActivity" />
         <activity android:name=".activity.ChangePwdActivity" />
-        <activity android:name=".activity.MemberInformationActivity"/>
-        <activity android:name=".activity.MemberRegisterActivity"/>
+        <activity android:name=".activity.MemberInformationActivity" />
+        <activity android:name=".activity.MemberRegisterActivity" />
+        <activity android:name=".activity.MemberSetInformationActivity" />
     </application>
 </manifest>

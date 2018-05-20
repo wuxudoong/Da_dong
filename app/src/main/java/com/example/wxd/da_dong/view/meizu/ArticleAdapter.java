@@ -16,11 +16,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-/**
- * 适配器
- * Created by huanghaibin on 2017/12/4.
- */
-
 public class ArticleAdapter extends GroupRecyclerAdapter<String, Article> {
 
 

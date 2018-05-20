@@ -38,6 +38,7 @@ public class SpeechPage extends AutoConstraintLayout {
     private Gson mGson;
     private Activity mActivity;
     private static final String mNewsText = "昔人已乘黄鹤去，此地空余黄鹤楼。 黄鹤一去不复返，白云千载空悠悠。 晴川历历汉阳树，芳草萋萋鹦鹉洲。 日暮乡关何处是，烟波江上使人愁。";
+    private static final String sorry = "对不起，大东还需要学习";
 
     public SpeechPage(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -60,7 +61,7 @@ public class SpeechPage extends AutoConstraintLayout {
         MyLog.d(mActivity.getLocalClassName() + "shishi");
         Log.d(mActivity.getLocalClassName(), "shishi11");
         mBinding.tvSpeakChinese.setOnClickListener(v -> {
-           onRecognise();
+            onRecognise();
         });
         DrawableFactory.get(BlueRoundDrawable.class).setBackground(mBinding.tvSpeakChinese);
      /*   mBinding.btnCreateChinese.setOnClickListener(v -> {
@@ -100,7 +101,6 @@ public class SpeechPage extends AutoConstraintLayout {
     }
 
     private RecognizerDialogListener mRecognizerDialogListener = new RecognizerDialogListener() {
-
         /**
          *
          * @param recognizerResult 语音识别结果
@@ -115,13 +115,83 @@ public class SpeechPage extends AutoConstraintLayout {
             ResultBean resultBean = mGson.fromJson(recognizerResult.getResultString(), ResultBean.class);
             List<ResultBean.WsBean> ws = resultBean.getWs();
             String w = "";
+            boolean check = false;
+            boolean isStory = true;
+            int sum = 0;
+            int a, c;
             for (int i = 0; i < ws.size(); i++) {
                 List<ResultBean.WsBean.CwBean> cw = ws.get(i).getCw();
                 for (int j = 0; j < cw.size(); j++) {
                     w += cw.get(j).getW();
                 }
             }
-            onSynthesize(mNewsText);
+            String storyA = "诗";
+            String storyB = "诗歌";
+            String storyC = "故事";
+            if (w.equals(storyA) || w.equals(storyB) || w.equals(storyC)) {
+                isStory = true;
+            } else {
+                isStory = false;
+            }
+
+
+            if (isStory) {
+                onSynthesize(mNewsText);
+                return;
+            } else {
+                for (int i = 0; i < w.length(); ++i) {
+                    switch (w.charAt(i)) {
+                        case '+':
+                            if (w.charAt(i - 1) <= '9' && w.charAt(i - 1) >= '0' && w.charAt(i + 1) <= '9' && w.charAt(i + 1) >= '0') {
+                                a = w.charAt(i - 1) - '0';
+                                c = w.charAt(i + 1) - '0';
+                                sum = a + c;
+                                check = true;
+                                break;
+                            }
+                            break;
+                        case '-':
+                            if (w.charAt(i - 1) <= '9' && w.charAt(i - 1) >= '0' && w.charAt(i + 1) <= '9' && w.charAt(i + 1) >= '0') {
+                                a = w.charAt(i - 1) - '0';
+                                c = w.charAt(i + 1) - '0';
+                                sum = a - c;
+                                check = true;
+                                break;
+                            }
+                            break;
+                        case '×':
+                            if (w.charAt(i - 1) <= '9' && w.charAt(i - 1) >= '0' && w.charAt(i + 1) <= '9' && w.charAt(i + 1) >= '0') {
+                                a = w.charAt(i - 1) - '0';
+                                c = w.charAt(i + 1) - '0';
+                                sum = a * c;
+                                check = true;
+                                break;
+                            }
+                            break;
+                        case '÷':
+                            if (w.charAt(i - 1) <= '9' && w.charAt(i - 1) >= '0' && w.charAt(i + 1) <= '9' && w.charAt(i + 1) >= '0') {
+                                a = w.charAt(i - 1) - '0';
+                                c = w.charAt(i + 1) - '0';
+                                sum = a / c;
+                                check = true;
+                                break;
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+            if (check) {
+                onSynthesize(w + "等于" + sum);
+             //   Toast.makeText(getContext(), w + isStory, Toast.LENGTH_SHORT).show();
+                check = false;
+            } else {
+                onSynthesize(sorry);
+           //     Toast.makeText(getContext(), w + isStory, Toast.LENGTH_SHORT).show();
+            }
+
         }
 
         @Override
@@ -129,6 +199,7 @@ public class SpeechPage extends AutoConstraintLayout {
 
         }
     };
+
 
     public void onSynthesize(String text) {
         //1.创建 SpeechSynthesizer 对象, 第二个参数： 本地合成时传 InitListener

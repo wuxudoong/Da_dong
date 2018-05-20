@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 
+import com.DaDongApplication;
 import com.example.member.R;
 import com.example.member.databinding.MemberMainViewBinding;
 import com.example.member.viewModel.MemberMainViewModel;
@@ -20,7 +21,6 @@ import com.zhy.autolayout.AutoConstraintLayout;
 public class MemberPage extends AutoConstraintLayout {
 
     MemberMainViewModel viewModel = new MemberMainViewModel();
-    private String portraitUrl = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4015140342,3033919786&fm=27&gp=0.jpg";
 
     public MemberPage(Context context) {
         super(context);
@@ -47,10 +47,10 @@ public class MemberPage extends AutoConstraintLayout {
     private void init(MemberMainViewBinding mBinding) {
         mBinding.setViewModel(viewModel);
         String phone = "17826875948";
-        viewModel.portraitUrl.set(portraitUrl);
-        mBinding.tvMemberName.setText("吴大东");
-        mBinding.vSchedule.setOnClickListener(v -> {
+        viewModel.portraitUrl.set(DaDongApplication.getSpUtils().getString("portrait", null));
+        mBinding.tvMemberName.setText(DaDongApplication.getSpUtils().getString("name", null));
 
+        mBinding.vSchedule.setOnClickListener(v -> {
         });
 
         mBinding.vContact.setOnClickListener(v -> {
@@ -61,9 +61,7 @@ public class MemberPage extends AutoConstraintLayout {
             ActivityRouter.gotoMemberSystermSetting(getContext());
         });
 
-        mBinding.tvEditInfo.setOnClickListener(v->{
-            ActivityRouter.gotoMemberInformationActivity(getContext());
-        });
+        mBinding.tvEditInfo.setOnClickListener(v -> ActivityRouter.gotoMemberInformationActivity(getContext()));
     }
 
 

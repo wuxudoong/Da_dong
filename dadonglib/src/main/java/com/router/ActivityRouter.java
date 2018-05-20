@@ -33,6 +33,11 @@ public class ActivityRouter {
     public static final String MEMBER_CHANGE_PWD = "/member/changepwd";
     public static final String MEMBER_INFORMATION = "/member/information";
     public static final String MEMBER_REGISTER = "/member/register";
+    public static final String MEMBER_SETTING_INFORMATION = "/member/settinginformation";
+
+    public static void gotoMemberSettingInformationActivity(String information, Context context){
+        ARouter.getInstance().build(MEMBER_SETTING_INFORMATION).withString("information", information).navigation(context);
+    }
 
     public static void gotoMemberRegisterActivity(Context context){
         ARouter.getInstance().build(MEMBER_REGISTER).navigation(context);

@@ -9,6 +9,7 @@ import com.example.member.databinding.MemberLoginLayoutBinding;
 import com.router.ActivityRouter;
 import com.uikit.DrawableFactory;
 import com.uikit.drawable.BlueBtnDrawable;
+import com.utils.SPUtils;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 /**
@@ -27,8 +28,13 @@ public class MemberLoginActivity extends AutoLayoutActivity {
     }
 
     private void init() {
-
         DrawableFactory.get(BlueBtnDrawable.class).setBackground(mBinding.memberBtnLogin);
-        mBinding.memberBtnLogin.setOnClickListener(v -> ActivityRouter.gotoAppMainActivity(this));
+        mBinding.memberBtnLogin.setOnClickListener(v -> {
+            if (mBinding.memberPetPhone.getRealText().equals(SPUtils.getSpUtils(this, "DaDong").getString("phoneNumber", ""))) {
+                if (mBinding.memberEtPwd.getText().toString().equals(SPUtils.getSpUtils(this, "DaDong").getString("passWord", ""))) {
+                    ActivityRouter.gotoAppMainActivity(this);
+                }
+            }
+        });
     }
 }

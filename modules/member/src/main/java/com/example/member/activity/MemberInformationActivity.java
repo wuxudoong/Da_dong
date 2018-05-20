@@ -3,6 +3,7 @@ package com.example.member.activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 
+import com.DaDongApplication;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.member.R;
 import com.example.member.databinding.MemberInformationLayoutBinding;
@@ -18,36 +19,56 @@ import com.zhy.autolayout.AutoLayoutActivity;
 @Route(path = ActivityRouter.MEMBER_INFORMATION)
 public class MemberInformationActivity extends AutoLayoutActivity {
 
+    MemberInformationViewModel viewModel = new MemberInformationViewModel();
+
     @Override
+
     public void onCreate(Bundle saveInstancestate) {
         super.onCreate(saveInstancestate);
         MemberInformationLayoutBinding mBinding = DataBindingUtil.setContentView(this, R.layout.member_information_layout);
         init(mBinding);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        initData();
+    }
+
     private void init(MemberInformationLayoutBinding mBinding) {
-        MemberInformationViewModel viewModel = new MemberInformationViewModel();
         mBinding.setViewModel(viewModel);
-        initData(viewModel);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.showLeftTitle(v -> {
             finish();
         }, getString(R.string.member_wxd_013));
         toolbar.setTitle(getString(R.string.member_wxd_028));
+        mBinding.rlName.setOnClickListener(v -> {
+            ActivityRouter.gotoMemberSettingInformationActivity("name", this);
+        });
+        mBinding.rlCity.setOnClickListener(v->{
+            ActivityRouter.gotoMemberSettingInformationActivity("city", this);
+        });
+        mBinding.rlGrade.setOnClickListener(v->{
+            ActivityRouter.gotoMemberSettingInformationActivity("grade", this);
+        });
+        mBinding.rlSign.setOnClickListener(v->{
+            ActivityRouter.gotoMemberSettingInformationActivity("sign", this);
+        });
     }
 
-    private void initData(MemberInformationViewModel viewModel) {
-        String portraitUrl = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4015140342,3033919786&fm=27&gp=0.jpg";
-        String city = "浙江";
-        String grade = "5岁";
-        String sign = "宝宝天天开心";
-        String name = "吴大东";
+    private void initData() {
+        String portraitUrl = DaDongApplication.spUtils.getString("portrait", "");
+        String city = DaDongApplication.spUtils.getString("city", "");
+        String grade = DaDongApplication.spUtils.getString("grade", "");
+        String sign = DaDongApplication.spUtils.getString("sign", "");
+        String name = DaDongApplication.spUtils.getString("name", "");
+        boolean isMale = DaDongApplication.spUtils.getBoolean("male", true);
         viewModel.name.set(name);
         viewModel.portraitUrl.set(portraitUrl);
         viewModel.city.set(city);
         viewModel.grade.set(grade);
         viewModel.sign.set(sign);
-        viewModel.isMale.set(true);
+        viewModel.isMale.set(isMale);
 
     }
 }

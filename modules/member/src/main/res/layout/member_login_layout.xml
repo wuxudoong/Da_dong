@@ -78,7 +78,7 @@
             android:gravity="center|left"
             android:hint="@string/member_wxd_004"
             android:inputType="textPassword"
-            android:maxLength="8"
+            android:maxLength="16"
             android:textColorHint="@color/C4"
             android:textSize="@dimen/T1"
             app:layout_constraintTop_toBottomOf="@+id/member_view_spilt_phone" />

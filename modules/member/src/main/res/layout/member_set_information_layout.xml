@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/B2">
+
+        <include layout="@layout/toolbar" />
+
+        <EditText
+            android:id="@+id/et_information"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="50px"
+            android:background="@null"
+            android:maxLength="6"
+            android:textColor="@color/C2"
+            android:textColorHint="@color/C4"
+            android:textCursorDrawable="@drawable/bg_cursor_color"
+            android:textSize="@dimen/T3"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/v_spilt_info"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30px"
+            android:background="@color/P1"
+            app:layout_constraintTop_toBottomOf="@+id/et_information" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginRight="30px"
+            android:background="@drawable/icon_member_clear"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/et_information"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_information" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

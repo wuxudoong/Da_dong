@@ -29,7 +29,6 @@
             android:gravity="center|left"
             android:hint="@string/member_wxd_014"
             android:inputType="textPassword"
-            android:maxLength="4"
             android:textColorHint="@color/C4"
             android:textSize="@dimen/T4"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -53,7 +52,6 @@
             android:gravity="center|left"
             android:hint="@string/member_wxd_016"
             android:inputType="textPassword"
-            android:maxLength="4"
             android:textColorHint="@color/C4"
             android:textSize="@dimen/T4"
             app:layout_constraintTop_toBottomOf="@+id/et_old_pwd" />
