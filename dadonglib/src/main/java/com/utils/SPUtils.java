@@ -21,7 +21,11 @@ public class SPUtils {
     public static SPUtils getSpUtils(Context context, String fileName) {
 
         if (spUtils == null) {
-            spUtils = new SPUtils(context, fileName);
+            synchronized (SPUtils.class) {
+                if (spUtils == null) {
+                    spUtils = new SPUtils(context, fileName);
+                }
+            }
         }
 
         return spUtils;

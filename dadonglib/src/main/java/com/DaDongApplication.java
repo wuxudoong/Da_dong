@@ -29,7 +29,7 @@ public class DaDongApplication extends Application {
         SpeechUtility.createUtility(this, SpeechConstant.APPID + "=56f22e12");
         spUtils = SPUtils.getSpUtils(context, "DaDong");
         spUtils.putString("phoneNumber", "17826875948");
-        spUtils.putString("passWord", "wxdwxd123");
+        spUtils.putString("passWord", "123456");
         spUtils.putBoolean("gender", true);
         spUtils.putString("city", "浙江");
         spUtils.putString("sign", "守得云开见月明");
